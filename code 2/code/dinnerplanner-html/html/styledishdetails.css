@@ -1,0 +1,173 @@
+/*page layout*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 微软雅黑;
+    font-size: 20px;
+}
+#wrap{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding:0; /*最外层嵌套一个div设置整个布局为居中对齐*/
+}
+#head{
+    background-color: #D3D3D3;
+    text-align: center;
+    position: absolute;/*使用fixed固定尾部一直处于窗口下面，在浏览器窗口改变大小时也能保证布局的美观*/
+    height: 60px;
+    width:100%;
+    top: 0;
+    border-bottom: 2px solid #999;
+}
+.yaofengle{
+    background-color: white;
+    overflow: hidden; /*当主干部分和尾部排成一排时，需要清除浮动，使用clear:both;没有作用，这里使用overflow属性。*/
+    margin-top:60px; /*因为头尾部均设置高度为60px且脱离文档流，为了避免主体内容被头尾遮盖以及布局美观性，在这里设置上下外边距为70px*/
+    height: auto;
+}
+/*.left{
+    background-color: #fff;
+    width: 25%;
+    height: inherit;
+    float: left;
+    border:2px solid #000;
+}*/
+#nnav{
+      display:none;
+}
+@media only screen and (max-width: 767px)  {#nnav{display:block;}}
+#left{
+    background-color: #fff;
+    /*height: inherit;*/
+    float: left;
+    border-right:2px solid #000;
+    margin-bottom:0px;
+    bottom:0;
+    top:60px;
+    height:1200;
+}
+@media only screen and (max-width: 767px) {#left{display:none;}}
+.half{float: left;background-color: white;}
+#right_1{float: left;background-color: #fff;  height: auto; margin-top:20px;bottom:0;}
+#right_2{float: left;height: auto; margin-top:20px;margin-left: 30px}
+#right_3{ height: auto; margin-top:50px;margin-left: 10px}
+
+#dishname{
+    background-color:#999;
+    height:40px;
+    width:100%;
+    margin-top:30px;
+    border-top:2px solid #000;
+    border-bottom:2px solid #000;
+    border-left:2px solid #000;
+   }
+#nname{
+    float:left;
+}
+#ccost{
+     float:left;
+}
+#price{
+    color:#ff6600;
+    height:15px;
+    width:100%;
+    margin-top:30px;
+    text-align: right;
+}
+.button
+{
+    text-align: center;
+    font-size:30pt; 
+    margin-top:60px;
+}
+h3{font-weight:bold;}
+.para{ margin-top:10px;}
+p{font-size: 13px;}
+.button2
+{
+    text-align: left;
+    font-size:30pt; 
+    margin-top:15px;
+}
+
+#ingre{
+    padding:10px;
+    margin-top:20px;
+    margin-left:0px;
+    height:auto;
+    border:2px solid #000;
+    background-color: #ffff6f;
+    float:left;
+}
+.sheet{
+     margin-left:5px;
+     margin-right:5px;
+     margin-top:25px;
+     border-top:2px solid #000;
+     border-bottom:2px solid #000;
+}
+
+.lastline
+{
+    margin-top:15px;
+    
+}
+.button3
+{
+    text-align: left;
+    font-size:25pt; 
+    float:left;
+   
+    
+}
+.price2
+{
+    float:left;
+    width:20px;
+    margin-top:15px;
+    margin-left:100px;
+}
+
+@media only screen and (min-width: 1200px) {}   页面大于1200时的样式
+@media only screen and (min-width: 768px) and (max-width: 991px) {} 平板时的样式
+@media only screen and (max-width: 767px) {}    手机时的样式 和 Mobile Menu
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), 
+only screen and (-o-min-device-pixel-ratio: 13/10), only screen and (min-resolution: 120dpi) {} 高清屏的样式
+/*#scroll{
+    margin-top:0;
+    width:10px;
+    height:100%;
+    float:left;
+}
+.test{
+    width: 50px;
+    height: 200px;
+    overflow: auto;
+    float: left;
+    margin: 5px;
+    border: none;
+}
+.scrollbar{
+    width: 30px;
+    height: 600px;
+    margin: 0 auto;
+ 
+}
+.test-1::-webkit-scrollbar {
+        width: 20px;     /
+        height: 150px;
+    }
+.test-1::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+         -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        background: #535353;
+    }
+.test-1::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        border-radius: 10px;
+        background: #EDEDED;
+    }
+    .test-1::-webkit-scrollbar-arrow {
+        background: red;
+    }

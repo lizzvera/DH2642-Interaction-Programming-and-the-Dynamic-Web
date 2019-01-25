@@ -1,0 +1,188 @@
+/*page layout*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 微软雅黑;
+    font-size: 20px;
+}
+#wrap{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto; /*最外层嵌套一个div设置整个布局为居中对齐*/
+}
+#head{
+    background-color: #D3D3D3;
+    text-align: center;
+    width: 100%;
+    position: absolute;/*使用fixed固定尾部一直处于窗口下面，在浏览器窗口改变大小时也能保证布局的美观*/
+    height: 60px;
+    top: 0;
+    border-bottom: 2px solid #999;
+}
+.yaofengle{
+    background-color: ;
+    overflow: hidden; /*当主干部分和尾部排成一排时，需要清除浮动，使用clear:both;没有作用，这里使用overflow属性。*/
+    margin-top:60px; /*因为头尾部均设置高度为60px且脱离文档流，为了避免主体内容被头尾遮盖以及布局美观性，在这里设置上下外边距为70px*/
+}
+#nnav{
+      display:none;
+}
+@media only screen and (max-width: 767px)  {#nnav{display:block;}}
+#nnnav{
+      display:none;
+      border:2px solid #000;
+      height:auto;
+      background-color: white;
+}
+@media only screen and (max-width: 767px)  {#nnnav{display:block;}}
+.left{
+    background-color: #fff;
+    /*height: inherit;*/
+    float: left;
+    border-right:2px solid #000;
+    margin-bottom:0px;
+    position: fixed;
+    bottom:0;
+    top:60px;
+}
+@media only screen and (max-width: 767px) {.left{display:none;}}
+#right_1{
+    height: 130px;
+    margin-top:0px; 
+    float: left;
+    border-bottom: 2px solid #000;
+
+}
+@media only screen and (max-width: 767px) {#right_1{display:none;}}
+#right_2{
+    height: auto; /*如果要设置贴到父容器底部，则设置高度足够大即可实现*/
+    float: left;
+    margin-top: 0px;   
+}
+/*#footer{
+    background-color: #AAA;
+    height: 70px;
+    width: inherit;  /*脱离文档流后宽度不受父容器限制，需要重新设定*/
+    /*position: fixed;/*使用fixed固定尾部一直处于窗口下面，在浏览器窗口改变大小时也能保证布局的美观*/
+    /*bottom: 0; /*保证紧贴窗口底部*/
+    /*border:1px solid #000;
+}*/
+
+#dishname{
+    background-color:#999;
+    height:40px;
+    width:100%;
+    margin-top:30px;
+    border-top:2px solid #000;
+    border-bottom:2px solid #000;
+
+}
+#item{
+    background-color:#d0d0d0;
+    height:40px;
+    width:70%;
+    margin-top:10px;
+    border:2px solid #000;
+    margin-left:40px;
+    padding:6px;
+    text-align: center;
+}
+#price{
+    color:#ff6600;
+    height:15px;
+    width:100%;
+    margin-top:30px;
+    text-align: right;
+}
+.button
+{
+    text-align: center;
+    font-size:30pt; 
+    margin-top:60px;
+}
+#find{
+    margin-top:5px;
+    margin-left:10px;
+}
+#line{
+    margin-top:20px;
+    width:100%;
+}
+#right_2{
+    margin:auto; 
+    width:100%; 
+    height:auto;
+}
+#photos{
+    margin-top:80px;
+    width:90%;
+    height:200px;
+    float:left;
+    margin-left:30px;
+}
+div.img
+{
+  margin: 3px;
+  border: 2px solid #111;
+  height: auto;
+  width: auto;
+  float: left;
+  text-align: center;
+}   
+ 
+div.img img
+{
+  display: inline;
+  margin: 1px;
+  border: 1px solid #ffffff;
+}
+ 
+div.img a:hover img {border: 1px solid #0000ff;}
+ 
+div.desc
+{
+  text-align: center;
+  font-weight: normal;
+  width: 100%;
+  margin: 0;
+  border-top: 2px solid #111;
+  background-color:#9D9D9D;
+}
+#scroll{
+    margin-top:0;
+    width:6px;
+    float:left;
+    height:100%;
+    margin-left:0;
+}
+.test{
+    width: 50px;
+    height: 200px;
+    overflow: auto;
+    float: left;
+    margin: 5px;
+    border: none;
+}
+.scrollbar{
+    width: 30px;
+    height: 600px;
+    margin: 0 auto;
+ 
+}
+.test-1::-webkit-scrollbar {/*滚动条整体样式*/
+        width: 20px;     /*高宽分别对应横竖滚动条的尺寸*/
+        height: 150px;
+    }
+.test-1::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+        border-radius: 10px;
+         -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        background: #535353;
+    }
+.test-1::-webkit-scrollbar-track {/*滚动条里面轨道*/
+        -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        border-radius: 10px;
+        background: #EDEDED;
+    }
+    .test-1::-webkit-scrollbar-arrow {/*滚动条里面轨道*/
+        background: red;
+    }
